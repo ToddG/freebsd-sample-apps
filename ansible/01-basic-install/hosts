@@ -1,0 +1,11 @@
+[freebsd_hosts]
+fbsdhost ansible_become_pass='{{ vault_fbsdhost_toddg_password }}'
+
+[freebsd_hosts:vars]
+ansible_python_interpreter='/usr/local/bin/python3'
+ansible_user='toddg'
+ansible_become=yes
+ansible_become_method=sudo
+ansible_connection=ssh
+ansible_ssh_private_key_file=/home/toddg/.ssh/id_ed25519
+

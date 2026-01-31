@@ -1,0 +1,15 @@
+---
+- hosts: freebsd_hosts
+  become: yes
+  tasks:
+    - name: update system packages
+      pkgng:
+        name: '*'
+        state: latest
+
+    - name: install required software
+      pkgng:
+        name: 
+          - git
+          - vim
+        state: present

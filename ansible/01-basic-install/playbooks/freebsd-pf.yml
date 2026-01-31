@@ -1,0 +1,5 @@
+---
+- hosts: freebsd_hosts
+  become: yes
+  roles:
+    - vbotka.freebsd_pf
